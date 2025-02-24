@@ -117,7 +117,6 @@ function App() {
               className="mb-8 p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg"
               whileHover={{
                 scale: 1.05,
-                backgroundColor: "#000",
                 boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.2)",
               }}
             >
@@ -143,7 +142,7 @@ function App() {
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              whileHover={{ scale: 1.05, backgroundColor: "#000" }}
+              whileHover={{ scale: 1.05 }}
               className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg"
             >
               <h3 className="text-xl font-bold mb-2 dark:text-white">
@@ -177,7 +176,6 @@ function App() {
               className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg"
               whileHover={{
                 scale: 1.05,
-                backgroundColor: "#000",
                 transition: { duration: 0.3 },
               }}
             >
@@ -191,8 +189,6 @@ function App() {
                     className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full cursor-pointer"
                     whileHover={{
                       scale: 1.1,
-                      backgroundColor: "#111827",
-                      color: "white",
                     }}
                   >
                     {skill}
@@ -213,7 +209,6 @@ function App() {
               className="mb-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow"
               whileHover={{
                 scale: 1.05,
-                backgroundColor: "#000",
                 boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.2)",
               }}
             >
