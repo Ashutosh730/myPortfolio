@@ -84,6 +84,30 @@ function App() {
         </div>
       </Section>
 
+      {/* About Me Section */}
+      <Section id="about" title="About Me">
+        <motion.div
+          className="max-w-3xl mx-auto text-gray-700 dark:text-gray-300 p-6 rounded-lg shadow-md"
+          whileHover={{
+            scale: 1.02,
+            boxShadow: "0px 5px 15px rgba(0,0,0,0.2)",
+          }}
+        >
+          <p className="mb-4">
+            I am a passionate Software Developer and Data Engineer with
+            expertise in building scalable applications and data processing
+            solutions. With a strong foundation in computer science and hands-on
+            experience in modern technologies, I strive to create efficient and
+            innovative solutions to complex problems.
+          </p>
+          <p>
+            Currently working at Wipro, I specialize in developing robust
+            backend services and data processing pipelines using technologies
+            like Java, Spring Boot, Apache Spark, and cloud platforms.
+          </p>
+        </motion.div>
+      </Section>
+
       {/* Experience Section */}
       <Section id="experience" title="Experience">
         <div className="max-w-3xl mx-auto">
@@ -93,6 +117,7 @@ function App() {
               className="mb-8 p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg"
               whileHover={{
                 scale: 1.05,
+                backgroundColor: "#000",
                 boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.2)",
               }}
             >
@@ -118,7 +143,7 @@ function App() {
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.05, backgroundColor: "#000" }}
               className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg"
             >
               <h3 className="text-xl font-bold mb-2 dark:text-white">
@@ -143,7 +168,80 @@ function App() {
         </div>
       </Section>
 
-      {/* Social Media Links */}
+      {/* Skills Section */}
+      <Section id="skills" title="Skills">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+          {skills.map((skillGroup, index) => (
+            <motion.div
+              key={index}
+              className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg"
+              whileHover={{
+                scale: 1.05,
+                backgroundColor: "#000",
+                transition: { duration: 0.3 },
+              }}
+            >
+              <h3 className="text-xl font-bold mb-4 dark:text-white">
+                {skillGroup.category}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {skillGroup.items.map((skill, idx) => (
+                  <motion.span
+                    key={idx}
+                    className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full cursor-pointer"
+                    whileHover={{
+                      scale: 1.1,
+                      backgroundColor: "#111827",
+                      color: "white",
+                    }}
+                  >
+                    {skill}
+                  </motion.span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Certifications Section */}
+      <Section id="certifications" title="Certifications">
+        <div className="max-w-3xl mx-auto">
+          {certifications.map((cert, index) => (
+            <motion.div
+              key={index}
+              className="mb-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow"
+              whileHover={{
+                scale: 1.05,
+                backgroundColor: "#000",
+                boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.2)",
+              }}
+            >
+              <h3 className="text-lg font-semibold dark:text-white">
+                {cert.name}
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400">
+                Issued: {cert.date}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Education Section */}
+      {/* <Section id="education" title="Education">
+        <div className="max-w-3xl mx-auto p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+          <h3 className="text-xl font-bold mb-2 dark:text-white">
+            {education.degree}
+          </h3>
+          <p className="text-gray-700 dark:text-gray-300">
+            {education.institution}
+          </p>
+          <p className="text-gray-600 dark:text-gray-400">{education.period}</p>
+        </div>
+      </Section> */}
+
+      {/* Contact Section */}
       <Section id="contact" title="Contact">
         <div className="max-w-3xl mx-auto">
           <div className="flex justify-center space-x-6 mb-8">
@@ -175,7 +273,7 @@ function App() {
           </div>
 
           <motion.button
-            whileHover={{ scale: 1.1, backgroundColor: "#8A2BE2" }}
+            whileHover={{ scale: 1.1, backgroundColor: "#ff079d" }}
             whileTap={{ scale: 0.9 }}
             className="flex items-center justify-center mx-auto px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
             onClick={() =>
