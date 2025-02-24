@@ -36,7 +36,7 @@ function App() {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            whileHover={{ scale: 1.1 }} // Hover effect
+            whileHover={{ scale: 1.1 }}
             className="mb-4"
           >
             <img
@@ -49,7 +49,7 @@ function App() {
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            whileHover={{ scale: 1.05, color: "#8A2BE2" }} // Hover effect
+            whileHover={{ scale: 1.05 }}
             className="text-4xl md:text-6xl font-bold mb-2 dark:text-white"
           >
             Ashutosh Kumar
