@@ -40,7 +40,7 @@ function App() {
             className="mb-4"
           >
             <img
-              src="public/profile-pic (3).png"
+              src="/profile-pic_3.png"
               alt="Ashutosh Kumar"
               className="w-64 h-64 rounded-full border-4 shadow-lg"
               style={{ borderColor: "#c29dc2" }}
